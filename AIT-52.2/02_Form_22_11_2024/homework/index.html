@@ -6,10 +6,53 @@
     <title>Fitness Form</title>
     <style>
       body {
-          background-image: url('https://wallpapertag.com/wallpaper/full/6/2/2/198303-gym-background-2278x1521-mac.jpg'); /* Укажите путь к изображению */
-          background-repeat: no-repeat; 
-          background-size: cover; 
-          background-position: center; 
+          background-image: url('https://wallpapertag.com/wallpaper/full/6/2/2/198303-gym-background-2278x1521-mac.jpg'); 
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        
+      }
+
+      form {
+          background-color: rgba(255, 255, 255, 0.9); /* Белый с прозрачностью */
+          max-width: 400px;
+          margin: 50px auto;
+          padding: 20px;
+          border-radius: 10px; 
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* тень */
+      }
+
+      h1 {
+          text-align: center;
+      }
+
+      label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          display: block;
+      }
+
+      input, select {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px; /* Закругление углов полей */
+          font-size: 14px;
+      }
+
+      button {
+          width: 100%;
+          padding: 10px;
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+
+      div {
+          margin-bottom: 15px;
       }
   </style>
 </head>
@@ -55,9 +98,9 @@
             <label for ="fsport"> Favorite exercise: </label>
             <select id="fsport" required> 
              <option value=""> Choose your favorite exercise</option>
-             <option value="Bench press"> Bench press is my favorite one</option>
-             <option value="Squats"> Squat is my favorite one</option>
-             <option value="Deadlift"> Deadlift is my favorite one</option>
+             <option value="Bench press"> Bench press</option>
+             <option value="Squats"> Squat</option>
+             <option value="Deadlift"> Deadlift </option>
             </select>
         </div>
         <br />
@@ -78,8 +121,6 @@
         <br />
         <button type="submit">Finish</button>
       </form>
-
-    </form>
     
 </body>
 </html>
