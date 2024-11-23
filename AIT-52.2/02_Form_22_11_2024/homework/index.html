@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Form</title>
+    <style>
+      body {
+          background-image: url('https://wallpapertag.com/wallpaper/full/6/2/2/198303-gym-background-2278x1521-mac.jpg'); /* Укажите путь к изображению */
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          background-position: center; 
+      }
+  </style>
+</head>
+<body>
+    <h1>Personal Fitness Assessment Form</h1>
+    <form>
+      <div>
+     <label for="name"> Name:</label>
+     <input
+          id="name"
+          type="text"
+          placeholder="Enter your name..." 
+        required />
+    </div> 
+    <br />
+    <div>
+        <label for ="bday"> Date of birth: </label>
+        <input
+          id = "bday"
+          type="date"
+          required />
+      </div>
+    <br />
+    <div>
+        <label for ="cell"> Telephone: </label>
+        <input
+          id = "cell"
+          type="tel" 
+          placeholder="Enter your phone number..." 
+          required />
+      </div>
+      <br />
+      <div>
+        <label for ="email"> E-mail: </label>
+        <input
+          id = "email"
+          type="email" 
+          placeholder="Enter your email..." 
+          />
+      </div>
+      <br />
+      <div>
+            <label for ="fsport"> Favorite exercise: </label>
+            <select id="fsport" required> 
+             <option value=""> Choose your favorite exercise</option>
+             <option value="Bench press"> Bench press is my favorite one</option>
+             <option value="Squats"> Squat is my favorite one</option>
+             <option value="Deadlift"> Deadlift is my favorite one</option>
+            </select>
+        </div>
+        <br />
+        <div>
+          <label>Would you like to participate in our annual powerlifting championship?</label>
+          <input id="yes"
+           type="radio"
+            name="championship" 
+            value="yes"
+            required>
+          <label for="yes">Yes</label>
+          <input id="no"
+            type="radio" 
+            name="championship" 
+            value="no">
+          <label for="no">No</label>
+        </div>
+        <br />
+        <button type="submit">Finish</button>
+      </form>
+
+    </form>
+    
+</body>
+</html>
