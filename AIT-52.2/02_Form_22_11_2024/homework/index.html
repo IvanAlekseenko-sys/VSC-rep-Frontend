@@ -1,126 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Fitness Form</title>
-    <style>
-      body {
-          background-image: url('https://wallpapertag.com/wallpaper/full/6/2/2/198303-gym-background-2278x1521-mac.jpg'); 
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        
-      }
-
-      form {
-          background-color: rgba(255, 255, 255, 0.9); /* Белый с прозрачностью */
-          max-width: 400px;
-          margin: 50px auto;
-          padding: 20px;
-          border-radius: 10px; 
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* тень */
-      }
-
-      h1 {
-          text-align: center;
-      }
-
-      label {
-          font-weight: bold;
-          margin-bottom: 5px;
-          display: block;
-      }
-
-      input, select {
-          padding: 10px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 5px; /* Закругление углов полей */
-          font-size: 14px;
-      }
-
-      button {
-          width: 100%;
-          padding: 10px;
-          background-color: #007BFF;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          font-size: 16px;
-          cursor: pointer;
-      }
-
-      div {
-          margin-bottom: 15px;
-      }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Personal Fitness Assessment Form</h1>
     <form>
       <div>
-     <label for="name"> Name:</label>
-     <input
+        <label for="name"> Name:</label>
+        <input
           id="name"
           type="text"
-          placeholder="Enter your name..." 
-        required />
-    </div> 
-    <br />
-    <div>
-        <label for ="bday"> Date of birth: </label>
-        <input
-          id = "bday"
-          type="date"
-          required />
-      </div>
-    <br />
-    <div>
-        <label for ="cell"> Telephone: </label>
-        <input
-          id = "cell"
-          type="tel" 
-          placeholder="Enter your phone number..." 
-          required />
+          placeholder="Enter your name..."
+          required
+        />
       </div>
       <br />
       <div>
-        <label for ="email"> E-mail: </label>
-        <input
-          id = "email"
-          type="email" 
-          placeholder="Enter your email..." 
-          />
+        <label for="bday"> Date of birth: </label>
+        <input id="bday" type="date" required />
       </div>
       <br />
       <div>
-            <label for ="fsport"> Favorite exercise: </label>
-            <select id="fsport" required> 
-             <option value=""> Choose your favorite exercise</option>
-             <option value="Bench press"> Bench press</option>
-             <option value="Squats"> Squat</option>
-             <option value="Deadlift"> Deadlift </option>
-            </select>
-        </div>
-        <br />
-        <div>
-          <label>Would you like to participate in our annual powerlifting championship?</label>
-          <input id="yes"
-           type="radio"
-            name="championship" 
-            value="yes"
-            required>
-          <label for="yes">Yes</label>
-          <input id="no"
-            type="radio" 
-            name="championship" 
-            value="no">
-          <label for="no">No</label>
-        </div>
-        <br />
-        <button type="submit">Finish</button>
-      </form>
-    
-</body>
+        <label for="cell"> Telephone: </label>
+        <input
+          id="cell"
+          type="tel"
+          placeholder="Enter your phone number..."
+          pattern="\+[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Example: +123-456-7890"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email"> E-mail: </label>
+        <input id="email" type="email" placeholder="Enter your email..." />
+      </div>
+      <br />
+      <div>
+        <label for="fsport"> Favorite exercise: </label>
+        <select id="fsport" required>
+          <option value="">Choose your favorite exercise</option>
+          <option value="Bench press">Bench press</option>
+          <option value="Squats">Squat</option>
+          <option value="Deadlift">Deadlift</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label
+          >Would you like to participate in our annual powerlifting
+          championship?</label
+        >
+        <input id="yes" type="radio" name="championship" value="yes" required />
+        <label for="yes">Yes</label>
+        <input id="no" type="radio" name="championship" value="no" />
+        <label for="no">No</label>
+      </div>
+      <br />
+      <button type="submit">Finish</button>
+    </form>
+  </body>
 </html>
