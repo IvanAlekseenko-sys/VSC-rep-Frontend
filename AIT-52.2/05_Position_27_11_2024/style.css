@@ -1,5 +1,59 @@
 div{
+    position: relative;
     width: 600px;
     height: 400px;
     background-image: url("./img/bg.jpg");
+}
+
+/* делаем общий стиль для body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 4, 26);
+}
+
+/* задаем параметры для всех изображений*/
+img {
+    position: absolute;
+    height: auto;
+}
+
+/* позиционируем каждое изображение */
+.planet-1{
+    top: 5%;
+    left: 30%;
+}
+
+.planet-2 {
+    top: 17%;
+    left: 8%;
+}
+
+.planet-3{
+    top: 35%;
+    left: 24%;
+}
+
+.asteroid {
+    top: 17.5%;
+    left: 73%;
+}
+
+.spaceship {
+    top: 40%;
+    left: 24%;
+}
+
+.ufo{
+    top: 75%;
+    left: 19%;
+}
+
+.superman {
+    top: 83%;
+    left: 82%;
 }
