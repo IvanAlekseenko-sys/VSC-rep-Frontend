@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "SuperMario256";
+  src: url("./fonts/SuperMario256.ttf") format("truetype");
+}
+h1 {
+  font-family: "SuperMario256", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://i.pinimg.com/1200x/1f/a4/46/1fa44618d7b48d7471b26c58196fedc1.jpg");
+  margin: 0;
+}
+.Characters_gallery {
+  width: 100%;
+  min-height: 600px;
+  padding: 15px 0px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Characters > img {
+  width: 220px;
+}
+.Characters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  width: 350px;
+  align-content: start;
+}
