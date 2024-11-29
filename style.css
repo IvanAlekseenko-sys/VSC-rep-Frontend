@@ -1,3 +1,19 @@
-a{
- color: black;   
+.lesson-container {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  padding: 0px 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* стили с псевдоклассом hover применятся к элементу при наведении на него*/
+a:hover {
+  text-decoration: underline;
+  color: coral;
+}
+h1{
+    color: coral;
 }
