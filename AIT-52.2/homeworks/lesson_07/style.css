@@ -4,7 +4,7 @@
 }
 h1 {
   margin: 10px 0; /* Убираем лишние отступы для точного центрирования */
-  font-size: 2.5rem; /* Увеличиваем размер заголовка, если нужно */
+  font-size: 2.5rem;
 }
 header {
   width: 100%;
@@ -36,14 +36,14 @@ header {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* плавный переход */
 }
 .navigation a:hover {
   color: bisque;
 }
 .grid-item-adaptive p:hover {
-  color: bisque; /* Меняем цвет текста */
-  transition: color 0.3s ease; /* Плавный переход */
+  color: bisque;
+  transition: color 0.3s ease;
 }
 
 body {
@@ -66,8 +66,6 @@ p {
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 5px;
-  /* первое число - горизонтальный промежуток, второе - вертикальный */
-  /* gap: 5px 20px; */
   grid-auto-rows: 400px;
 }
 
@@ -83,16 +81,16 @@ p {
 }
 
 .grid-item-adaptive img {
-  max-width: 100%; /* Изображение не будет шире своего контейнера */
-  max-height: 100%; /* Изображение не будет выше своего контейнера */
-  object-fit: cover; /* Изображение будет масштабироваться, сохраняя пропорции */
-  border-radius: 8px; /* К примеру, для закругленных углов */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Легкая тень для красоты */
+  max-width: 100%; /* изображение не будет вываливаться за контейнер по ширине */
+  max-height: 100%; /* изображение не будет вываливаться за контейнер по высоте */
+  object-fit: cover; /* масштабируем изображения с сохранением пропорций*/
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* небольшая тень*/
 }
 .grid-item-adaptive a {
-  display: flex; /* Используем flexbox для выравнивания */
-  flex-direction: column; /* Располагаем элементы вертикально */
-  align-items: center; /* Центрируем элементы по горизонтали */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none; /* Убираем подчеркивание у текста */
   color: inherit; /* Наследуем цвет текста */
 }
