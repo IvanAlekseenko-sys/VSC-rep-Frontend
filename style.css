@@ -1,22 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.headdd {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0, "XELA" 0, "YELA" 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Устанавливаем высоту и обнуляем отступы для body и html */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-image: url(./AIT-52.2/images/mario-mario-videoigra-igra-nintendo-platformer-vodoprovodchi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* flex контейнер для вертикального расположения */
 .lesson-container {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
+  min-height: 100%; /* Растягиваем на всю высоту */
 }
-.main {
-  padding: 0px 30px;
+
+/* Основной блок с контентом */
+main {
+  padding: 0 30px;
+  flex: 1; /* заставляем main занимать оставшееся пространство */
 }
+
+/* прибиваем футер к низу*/
+footer {
+  height: 50px;
+  background-color: beige;
+  margin-top: auto; /* отталкивает футер вниз */
+  transition: background-color 0.3s ease, height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-small;
+}
+
 a {
   text-decoration: none;
-  color: black;
+  color: honeydew;
+  display: block;
+  margin-bottom: 10px;
+  width: fit-content; /* Ограничиваем ширину только содержимым, иначе поинтер появляется за границами ссылки */
+  padding: 5px 0;
 }
+
 a::before {
   content: "⚡";
 }
-/* стили с псевдоклассом hover применятся к элементу при наведении на него*/
+
+/* Ховер эффект для ссылок */
 a:hover {
   text-decoration: underline;
   color: coral;
 }
+
+/* Стили для заголовков */
 h1 {
   color: coral;
+}
+/* делаем адаптацию через медиа для iPhone 14 Pro Max и следом для iPad Mini */
+@media (max-width: 431px) {
+  body {
+    background-size: cover;
+    background-position: 770px;
+  }
+  a {
+    color: white;
+    /* для того, чтобы шрифт подстроился под фон делаем микс бленд дифференс */
+    mix-blend-mode: difference;
+  }
+}
+@media (min-width: 431px) and (max-width: 769px) {
+  body {
+    background-size: cover;
+    background-position: 900px;
+  }
 }
