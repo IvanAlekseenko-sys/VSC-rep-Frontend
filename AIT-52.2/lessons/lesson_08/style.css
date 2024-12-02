@@ -1,3 +1,77 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 h1 {
-  color: aquamarine;
+  color: forestgreen;
+}
+header {
+  /* приклеиваем элемент на страницу  */
+  position: sticky;
+  /* чтобы сработал стикер нужно указать значение в пикселях для одной из координат */
+  top: 0px;
+  height: 80px;
+  background-color: forestgreen;
+}
+
+main {
+  padding: 0px, 30px;
+  /* настройка для flex элемента, чтобы он растянулся по всей размеру контейнера родителя */
+  flex: 1;
+}
+
+footer {
+  height: 50px;
+  background-color: lightgray;
+}
+
+.grid-gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+}
+.grid-gallery section {
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.grid-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-gallery div {
+  height: 120px;
+}
+
+.grid-gallery a {
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.grid-gallery a:hover {
+  transform: scale(1.1);
+  /* background-color: forestgreen; */
+}
+
+@media (max-width: 464px) {
+  header {
+    background-color: rgb(195, 208, 195);
+  }
+  .grid-gallery div {
+    height: 200px;
+  }
+}
+@media (max-width: 663px) {
+  header {
+    background-color: rgb(142, 193, 142);
+  }
+  .grid-gallery div {
+    height: 170px;
+  }
 }
