@@ -121,3 +121,66 @@ h2 {
   max-height: 100vh; /* лимитируем высоту изображения размером экрана */
   object-fit: contain; /* сохраняем пропорции */
 }
+
+footer {
+  background-color: #545454;
+  color: white;
+  padding: 40px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 20px; 
+  margin-left: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.footer-button:hover {
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
+
+.footer-bottom {
+  margin-top: 0;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: Arial,sans-serif;
+}
