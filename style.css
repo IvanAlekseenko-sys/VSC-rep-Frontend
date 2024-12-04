@@ -14,6 +14,8 @@
 
 body,
 html {
+  font-family: "Tomorrow", sans-serif; /* Применяем шрифт ко всему тексту на странице */
+  margin: 0;
   height: 100%;
   margin: 0;
   background-image: url(./AIT-52.2/images/mario-mario-videoigra-igra-nintendo-platformer-vodoprovodchi.jpg);
