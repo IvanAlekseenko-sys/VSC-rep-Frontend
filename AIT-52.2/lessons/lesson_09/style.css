@@ -67,7 +67,6 @@ header a {
 .grid-item {
   display: flex;
   flex-direction: column; /* располагаем элементы вертикально*/
-  justify-content: center; /* центруем */
   align-items: stretch; /* распределяем элементы по ширине контейнера */
   text-align: left;
   max-width: 300px;
@@ -78,9 +77,9 @@ header a {
 .grid-item img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 200px; /* Устанавливаем максимальную высоту для изображений */
-  object-fit: contain; /* Масштабирует изображение, сохраняя пропорции */
+  height: 200px; /* Фиксированная высота для всех изображений */
+  object-fit: cover; /* Обрезает изображение, чтобы заполнить заданную высоту и ширину */
+  object-position: center; /* Центрирует изображение внутри контейнера */
   margin: 0 auto;
 }
 
@@ -183,4 +182,68 @@ footer {
   font-size: 14px;
   color: #fff;
   font-family: Arial,sans-serif;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  nav {
+    display: none; 
+  }
+
+  .services {
+    margin-left: auto;
+  }
+
+  .grid-container-1,
+  .grid-container-2,
+  .grid-container-3,
+  .grid-container-4,
+  .grid-container-5 {
+    padding: 0 5px;
+  }
+
+  h2 {
+    padding-left: 5px;
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    padding: 10px;
+  }
+
+  .services img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .grid-item img {
+      width: 100%; /* Ширина 100% контейнера */
+      height: 150px; /* Фиксируем одинаковую высоту для мобильной версии */
+      object-fit: cover; /* Уменьшаем или обрезаем изображение */
+      object-position: center; /* Центрируем изображение внутри контейнера */
+  }
+
+  footer {
+    padding: 10px;
+  }
 }
