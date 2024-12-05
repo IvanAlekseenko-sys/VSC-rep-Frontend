@@ -10,10 +10,9 @@ btn.addEventListener("click", () => {
   // работайте с clonedBtn
   // ваш код начинается здесь
   document.body.append(clonedBtn);
-  let newElement = document.createElement("p");
-  newElement.innerText = "Я изменю тебя";
-  newElement.style.backgroundColor = "#a78b71";
-  newElement.style.color = "white";
+  clonedBtn.innerText="Я изменю тебя"
+  clonedBtn.style.backgroundColor = "#a78b71";
+  clonedBtn.style.color = "white";
   document.body.append(newElement);
 });
 
