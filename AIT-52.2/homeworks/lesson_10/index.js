@@ -13,7 +13,6 @@ btn.addEventListener("click", () => {
   clonedBtn.innerText="Я изменю тебя"
   clonedBtn.style.backgroundColor = "#a78b71";
   clonedBtn.style.color = "white";
-  document.body.append(newElement);
 });
 
 // здесь можете создать EventListener для второй кнопки
