@@ -1,5 +1,5 @@
 body {
-  box-sizing:border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   display: flex;
@@ -47,8 +47,8 @@ nav {
   font-weight: 600;
 }
 
-nav a:hover{
-  text-decoration: underline; 
+nav a:hover {
+  text-decoration: underline;
 }
 
 header a {
@@ -80,7 +80,7 @@ header a {
   height: 100%;
 }
 
-.grid-item img {;
+.grid-item img {
   display: block;
   width: 100%;
   height: 200px; /* Фиксированная высота для всех изображений */
@@ -102,7 +102,7 @@ h2 {
   font-size: inherit; /* наследуем размер шрифта родителя */
   vertical-align: baseline; /* Выравнивание с текстом */
 }
-.grid-item a:hover{
+.grid-item a:hover {
   text-decoration: underline;
 }
 
@@ -141,15 +141,14 @@ footer {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  gap: 20px; 
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
   margin-left: 40px;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
-  
 }
 
 .footer-button {
@@ -160,7 +159,6 @@ footer {
   font-weight: bold;
   cursor: pointer;
   padding: 0;
-  
 }
 
 .footer-button:hover {
@@ -172,26 +170,24 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  
 }
 
-.footer-links a{
+.footer-links a {
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
   text-decoration: underline;
 }
-
 
 .footer-bottom {
   margin-top: 0;
   text-align: left;
   font-size: 14px;
   color: #fff;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -202,7 +198,7 @@ footer {
   }
 
   nav {
-    display: none; 
+    display: none;
   }
 
   .services {
@@ -247,13 +243,13 @@ footer {
   }
 
   .grid-item img {
-      width: 100%; /* Ширина 100% контейнера */
-      height: 150px; /* Фиксируем одинаковую высоту для мобильной версии */
-      object-fit: cover; /* Уменьшаем или обрезаем изображение */
-      object-position: center; /* Центрируем изображение внутри контейнера */
+    width: 100%; /* Ширина 100% контейнера */
+    height: 150px; /* Фиксируем одинаковую высоту для мобильной версии */
+    object-fit: cover; /* Уменьшаем или обрезаем изображение */
+    object-position: center; /* Центрируем изображение внутри контейнера */
   }
 
   footer {
     padding: 10px;
   }
-} 
+}

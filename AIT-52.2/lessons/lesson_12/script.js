@@ -161,9 +161,9 @@ console.log("planets, но мез Марса ===>>  ", planets);
 // возвращенное значение - длина измененного массива
 
 // добавляем меркурий, а длину нового массива кладем в переменную newPlanetsLength
-let newPlanetsLength = planets.unshift("Mercury")
+let newPlanetsLength = planets.unshift("Mercury");
 
-console.log('возвращенное значение unshift', newPlanetsLength);
+console.log("возвращенное значение unshift", newPlanetsLength);
 
 console.log("planets, но с Меркурием ===>>  ", planets);
 
@@ -172,4 +172,4 @@ console.log("planets, но с Меркурием ===>>  ", planets);
 // let newPlanets = planets.push('Jupiter')
 // ! в newPlanets будет длина нового массива
 
-console.log(planets)
+console.log(planets);

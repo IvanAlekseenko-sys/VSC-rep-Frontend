@@ -53,3 +53,48 @@ for (let i = 0; i < originalArray.length; i++) {
 }
 console.log(originalArray);
 console.log(squaredArray);
+
+//! для инфо> разбор дз
+//поверхностное копирование
+let testArray = [20, 14, 19];
+let testArrayCopy = testArray;
+console.log(testArray);
+console.log(testArrayCopy);
+
+//глубокое копирование
+testArray = [20, 14, 19];
+testArrayCopy = testArray;
+testArrayCopy = [...testArray];
+testArray[0] = 200;
+
+console.log(testArray);
+console.log(testArrayCopy);
+
+let result = [];
+
+for (let i = 0; i < testArray.length; i++) {
+  result.push(`${arrayNames[i]} ${arrayAges[i]} лет/годов`); //шаблонная строка
+  //result.push(testArray[i] + " " + testArrayCopy[i] + "лет/годов")//конкатенация
+}
+console.log(result);
+let resultReverse = [];
+
+for (let i = result.length - 1; i >= 0; i--) {
+  resultReverse.push(result[i]);
+}
+
+let resultReversed2 = result.reverse();
+console.log(resultReversed2);
+
+for (const i in arrayNames) {
+  result.push(`${arrayNames[i]} ${arrayAges[i]} лет/годов`);
+}
+
+for (const name of arrayNames) {
+  console.log(name);
+}
+
+const numbersss = [1, 2, 3, 4, 5];
+for (const i in numbersss) {
+  console.log(numbersss[i]);
+}
