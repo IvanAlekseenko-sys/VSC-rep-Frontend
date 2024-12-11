@@ -9,3 +9,7 @@ console.log(answer);
 //Ответ (всегда возвращает String или Null)
 answer = prompt("Введите Ваше имя");
 console.log(answer);
+
+!по массивам 
+//for in мы перебираем индексы массива
+//for of мы перебираем элементы массива

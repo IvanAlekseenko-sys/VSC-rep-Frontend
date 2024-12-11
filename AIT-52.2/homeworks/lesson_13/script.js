@@ -13,7 +13,7 @@ let bankAccount = {
     if (sum <= this.balance && sum > 0) {
       this.balance -= sum; // Уменьшаем сумму баланса
     } else {
-      console.log("Недостаточно средств/некорректная сумма ввода");
+      alert("Недостаточно средств/некорректная сумма ввода");
     }
   },
   checkBalance: function () {
@@ -24,15 +24,15 @@ let bankAccount = {
 console.log(bankAccount);
 bankAccount.checkBalance();
 
-let sum = 0; //сумма к добавлению
-console.log("Сумма, которую Вы выбрали будет добавлена на Ваш счет...");
-bankAccount.deposit(sum);
-bankAccount.checkBalance();
+// let sum = 0; //сумма к добавлению
+// console.log("Сумма, которую Вы выбрали будет добавлена на Ваш счет...");
+// bankAccount.deposit(sum);
+// bankAccount.checkBalance();
 
-sum = 0; //сумма к снятию
-console.log("Сумма, которую Вы выбрали будет снята с Вашего счета...");
-bankAccount.withdraw(sum);
-bankAccount.checkBalance();
+// sum = 0; //сумма к снятию
+// console.log("Сумма, которую Вы выбрали будет снята с Вашего счета...");
+// bankAccount.withdraw(sum);
+// bankAccount.checkBalance();
 
 const bank = [];
 
@@ -47,9 +47,9 @@ function createAccount() {
       accountNumber: bank.length + 1,
       accountHolderName: name,
     });
-    alert(`Account created successfully`);
+    alert(`Аккаунт успешно создан`);
   } else {
-    alert("Please enter a valid name");
+    alert("Пожалуйста, введите корректное имя");
   }
   nameInput.value = "";
   console.log(bank);
@@ -57,22 +57,99 @@ function createAccount() {
 function showAccounts() {
   const accountList = document.getElementById("accountList"); // Получаем список для вывода
   accountList.innerHTML = ""; // Очищаем предыдущий список
+  //! первый вариант через forof
+  // for (const account of bank) {
 
-  if (bank.length > 0) {
-    for (let i = 0; i < bank.length; i++) {
-      const account = bank[i];
-      const listItem = document.createElement("li"); // Создаем элемент списка
-      listItem.textContent =
-        "Номер аккаунта: " +
-        account.accountNumber +
-        " | Держатель счета: " +
-        account.accountHolderName +
-        " | Баланс: " +
-        account.balance;
+  // const li = document.createElement("li")
+  // li.textContent = `ID: ${account.accountNumber}, Name: ${account.accountHolderName}, Balance ${account.balance}`
+  // accountList.append(li)
 
-      accountList.append(listItem); // Добавляем элемент в список
+  // //! второй вариант через innerHtml
+  //   accountList.innerHTML += (
+  //     `<li>
+  //       ID: ${account.accountNumber}, Name: ${account.accountHolderName},
+  //       Balance ${account.balance}
+  //     </li>`
+  //   );
+  // }
+
+  //!3 вариант перебора обычным for
+  // if (bank.length > 0) {
+  //   for (let i = 0; i < bank.length; i++) {
+  //     const account = bank[i];
+  //     const listItem = document.createElement("li"); // Создаем элемент списка
+  //     listItem.textContent =
+  //       "Номер аккаунта: " +
+  //       account.accountNumber +
+  //       " | Держатель счета: " +
+  //       account.accountHolderName +
+  //       " | Баланс: " +
+  //       account.balance;
+
+  //     accountList.append(listItem); // Добавляем элемент в список
+  //   }
+  // } else {
+  //   alert("Аккаунты отсутствуют.");
+  // }
+
+  //! 4 вариант через foreach (самый удобный)
+  bank.forEach((account, index) => {
+    accountList.innerHTML += `<li> ${index + 1}
+        ID: ${account.accountNumber}, Name: ${account.accountHolderName},
+        Balance ${account.balance}
+      </li>`;
+  });
+}
+const deposit = document.getElementById(`deposit`);
+const withdraw = document.getElementById(`withdraw`);
+
+deposit.onclick = function () {
+  //TODO (описание действия при нажатии на кнопку Deposit)
+  const accountId = document.getElementById("accountId").value.trim();
+  const amount = parseFloat(document.getElementById("amount").value);
+  const account = bank.find(
+    (acct) => acct.accountNumber.toString() === accountId
+  );
+  if (account) {
+    account.deposit(amount);
+    showAccounts();
+  }
+};
+
+withdraw.onclick = function () {
+  //TODO (описание действия при нажатии на кнопку Withdraw)
+  const accountId = document.getElementById("accountId").value.trim();
+  const amount = parseFloat(document.getElementById("amount").value);
+  const account = bank.find(
+    (acct) => acct.accountNumber.toString() === accountId
+  );
+  if (account) {
+    account.withdraw(amount);
+    showAccounts();
+  }
+};
+function deleteAccount() {
+  const idInput = document.getElementById("accountId2");
+  const id = idInput.value.trim();
+
+  if (id) {
+    // ищем индекс по айди
+    const index = bank.findIndex(
+      (account) => account.accountNumber.toString() === id
+    );
+
+    if (index !== -1) {
+      // удаление элемента в массиве по индексу
+      bank.splice(index, 1);
+      alert(`Аккаунт успешно удален`);
+      // Обновить список аккаунтов
+      showAccounts();
+    } else {
+      alert("Аккаунт не найден");
     }
   } else {
-    alert("Аккаунты отсутствуют.");
+    alert("Пожалуйста, введите корректный ID");
   }
+  idInput.value = "";
+  console.log(bank);
 }
