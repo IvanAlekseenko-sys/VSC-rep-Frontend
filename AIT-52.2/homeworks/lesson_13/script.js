@@ -97,6 +97,9 @@ function showAccounts() {
     accountList.innerHTML += `<li> ${index + 1}
         ID: ${account.accountNumber}, Name: ${account.accountHolderName},
         Balance ${account.balance}}
+        <button onclick="deleteAccount(${
+          account.accountNumber
+        })">Delete</button>
       </li>`;
   });
 }
@@ -124,27 +127,41 @@ withdraw.onclick = function () {
     showAccounts();
   }
 };
-function deleteAccount() {
-  const idInput = document.getElementById("accountId2");
-  const id = idInput.value.trim();
+function deleteAccount(id) {
+  const index = bank.findIndex(
+    i => i.accountNumber.toString() === id.toString()
+  );
 
-  if (id) {
-    // ищем индекс по айди
-    const index = bank.findIndex(
-      (account) => account.accountNumber.toString() === id
-    );
-
-    if (index !== -1) {
-      // удаление элемента в массиве по индексу
-      bank.splice(index, 1);
-      alert(`Аккаунт успешно удален`);
-      showAccounts();
-    } else {
-      alert("Аккаунт не найден");
-    }
+  if (index !== -1) {
+    bank.splice(index, 1);
+    alert(`Account deleted successfully`);
+    showAccounts();
   } else {
-    alert("Пожалуйста, введите корректный ID");
+    alert("Account not found");
   }
-  idInput.value = "";
-  console.log(bank);
 }
+
+// function deleteAccount() {
+//   const idInput = document.getElementById("accountId2");
+//   const id = idInput.value.trim();
+
+//   if (id) {
+//     // ищем индекс по айди
+//     const index = bank.findIndex(
+//       (account) => account.accountNumber.toString() === id
+//     );
+
+//     if (index !== -1) {
+//       // удаление элемента в массиве по индексу
+//       bank.splice(index, 1);
+//       alert(`Аккаунт успешно удален`);
+//       showAccounts();
+//     } else {
+//       alert("Аккаунт не найден");
+//     }
+//   } else {
+//     alert("Пожалуйста, введите корректный ID");
+//   }
+//   idInput.value = "";
+//   console.log(bank);
+// }
