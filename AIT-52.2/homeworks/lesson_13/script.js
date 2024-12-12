@@ -142,7 +142,6 @@ function deleteAccount() {
       // удаление элемента в массиве по индексу
       bank.splice(index, 1);
       alert(`Аккаунт успешно удален`);
-      // Обновить список аккаунтов
       showAccounts();
     } else {
       alert("Аккаунт не найден");
