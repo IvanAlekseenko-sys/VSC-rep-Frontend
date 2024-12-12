@@ -96,7 +96,7 @@ function showAccounts() {
   bank.forEach((account, index) => {
     accountList.innerHTML += `<li> ${index + 1}
         ID: ${account.accountNumber}, Name: ${account.accountHolderName},
-        Balance ${account.balance}
+        Balance ${account.balance}}
       </li>`;
   });
 }
@@ -105,11 +105,9 @@ const withdraw = document.getElementById(`withdraw`);
 
 deposit.onclick = function () {
   //TODO (описание действия при нажатии на кнопку Deposit)
-  const accountId = document.getElementById("accountId").value.trim();
   const amount = parseFloat(document.getElementById("amount").value);
-  const account = bank.find(
-    (acct) => acct.accountNumber.toString() === accountId
-  );
+  const accountId = document.getElementById("accountId").value.trim();
+  const account = bank.find((e) => e.accountNumber.toString() === accountId);
   if (account) {
     account.deposit(amount);
     showAccounts();
@@ -118,11 +116,9 @@ deposit.onclick = function () {
 
 withdraw.onclick = function () {
   //TODO (описание действия при нажатии на кнопку Withdraw)
-  const accountId = document.getElementById("accountId").value.trim();
   const amount = parseFloat(document.getElementById("amount").value);
-  const account = bank.find(
-    (acct) => acct.accountNumber.toString() === accountId
-  );
+  const accountId = document.getElementById("accountId").value.trim();
+  const account = bank.find((e) => e.accountNumber.toString() === accountId);
   if (account) {
     account.withdraw(amount);
     showAccounts();
