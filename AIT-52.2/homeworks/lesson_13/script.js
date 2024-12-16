@@ -134,10 +134,10 @@ function deleteAccount(id) {
 
   if (index !== -1) {
     bank.splice(index, 1);
-    alert(`Account deleted successfully`);
+    alert(`Аккаунт успешно удален`);
     showAccounts();
   } else {
-    alert("Account not found");
+    alert("Аккаунт не найден");
   }
 }
 
@@ -146,13 +146,13 @@ function deleteAccount(id) {
 //   const id = idInput.value.trim();
 
 //   if (id) {
-//     // ищем индекс по айди
+   // ищем индекс по айди
 //     const index = bank.findIndex(
 //       (account) => account.accountNumber.toString() === id
 //     );
 
 //     if (index !== -1) {
-//       // удаление элемента в массиве по индексу
+      // удаление элемента в массиве по индексу
 //       bank.splice(index, 1);
 //       alert(`Аккаунт успешно удален`);
 //       showAccounts();
