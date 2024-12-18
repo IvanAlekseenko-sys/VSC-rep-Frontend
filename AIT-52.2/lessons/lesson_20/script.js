@@ -26,7 +26,7 @@ async function getWeather() {
   // получите данные погоды: температуру, скорость ветра и.т.д
   // также заберите weathercode - он вам понадобится
   const heading = document.createElement("h2");
-  heading.textContent = city;
+  heading.textContent = `Your location: ${city}`;
   const currentWeatherRes = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
   );
@@ -112,14 +112,3 @@ async function getWeather() {
 }
 
 getWeather();
-
-//*кусок функции getWeather()
-// const latitude = document.createElement("p");
-//   latitude.textContent = `Latitude: ${data.latitude}`;
-//   document.body.append(latitude);
-//   const longitude = document.createElement("p");
-//   longitude.textContent = `Longitude: ${data.longitude}`;
-//   document.body.append(longitude);
-//   const city = document.createElement("p");
-//   city.textContent = `City: ${data.city}`;
-//   document.body.append(city);
