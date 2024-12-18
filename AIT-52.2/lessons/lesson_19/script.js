@@ -74,3 +74,20 @@ fetchProducts();
 
 //*поскольку в стрелочных функциях мы кладем имя функции в константу мы не сможем вызвать функцию до инициализации переменной
 //fetchProducts()
+
+//!Закрепляем fetch
+
+// fetch('https://fakestoreapi.com/products?limit=5')
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+
+// async function fetchTest() {
+  
+//   const res = await fetch('https://fakestoreapi.com/products?limit=5')
+//   const data = await res.json()
+//   console.log(data)
+// }
+// fetchTest()
